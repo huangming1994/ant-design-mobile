@@ -55,15 +55,15 @@ export default function alert(
 
   const prefixCls = 'am-modal';
 
-  function onWrapTouchStart(e: React.TouchEvent<HTMLDivElement>) {
-    if (!/iPhone|iPod|iPad/i.test(navigator.userAgent)) {
-      return;
-    }
-    const pNode = closest(e.currentTarget, `.${prefixCls}-footer`);
-    if (!pNode) {
-      e.preventDefault();
-    }
-  }
+  // function onWrapTouchStart(e: React.TouchEvent<HTMLDivElement>) {
+  //   if (!/iPhone|iPod|iPad/i.test(navigator.userAgent)) {
+  //     return;
+  //   }
+  //   const pNode = closest(e.currentTarget, `.${prefixCls}-footer`);
+  //   if (!pNode) {
+  //     e.preventDefault();
+  //   }
+  // }
 
   ReactDOM.render(
     <Modal
@@ -76,7 +76,7 @@ export default function alert(
       footer={footer}
       maskTransitionName="am-fade"
       platform={platform}
-      wrapProps={{ onTouchStart: onWrapTouchStart }}
+      // wrapProps={{ onTouchStart: onWrapTouchStart }}
     >
       <div className={`${prefixCls}-alert-content`}>{message}</div>
     </Modal>,
