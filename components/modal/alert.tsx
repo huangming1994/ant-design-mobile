@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import closest from '../_util/closest';
+// import closest from '../_util/closest';
 import Modal from './Modal';
 import { Action } from './PropsType';
 
